@@ -1,0 +1,55 @@
+/* Import Standard Notes theme variables */
+@import 'sn-extension-api/dist/sn.min.css';
+
+/* Base styles using SN theme variables */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--sn-stylekit-background-color);
+    color: var(--sn-stylekit-foreground-color);
+    font-family: var(--sn-stylekit-editor-font-family);
+    font-size: var(--sn-stylekit-font-size-editor);
+}
+
+.editor-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#editor {
+    flex: 1;
+    padding: 16px;
+    border: 1px solid var(--sn-stylekit-border-color);
+    background-color: var(--sn-stylekit-background-color);
+    color: var(--sn-stylekit-foreground-color);
+    font-family: var(--sn-stylekit-editor-font-family);
+    font-size: var(--sn-stylekit-font-size-editor);
+    resize: none;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#editor:focus {
+    border-color: var(--sn-stylekit-contrast-background-color);
+}
+
+/* Scrollbar styling */
+#editor::-webkit-scrollbar {
+    width: 8px;
+}
+
+#editor::-webkit-scrollbar-track {
+    background: var(--sn-stylekit-background-color);
+}
+
+#editor::-webkit-scrollbar-thumb {
+    background: var(--sn-stylekit-neutral-color);
+    border-radius: 4px;
+}
+
+#editor::-webkit-scrollbar-thumb:hover {
+    background: var(--sn-stylekit-contrast-background-color);
+}

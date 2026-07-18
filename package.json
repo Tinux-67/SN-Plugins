@@ -1,0 +1,30 @@
+{
+  "name": "sn-plugins",
+  "version": "0.1.0",
+  "description": "Standard Notes plugins by Tinux-67",
+  "main": "dist/index.html",
+  "scripts": {
+    "build": "tsc && cp src/*.html dist/ && cp src/*.css dist/",
+    "watch": "tsc -w",
+    "start": "npx serve dist",
+    "package": "npm run build && cd dist && zip -r ../latest.zip ."
+  },
+  "dependencies": {
+    "sn-extension-api": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "serve": "^14.0.0"
+  },
+  "keywords": [
+    "standard-notes",
+    "plugin",
+    "extension"
+  ],
+  "author": "Tinux-67",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tinux-67/SN-Plugins.git"
+  }
+}

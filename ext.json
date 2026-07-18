@@ -1,0 +1,11 @@
+{
+  "identifier": "dev.tinux-67.sn-plugins",
+  "name": "Tinux-67 Plugins",
+  "description": "A collection of Standard Notes plugins by Tinux-67",
+  "content_type": "SN|Component",
+  "area": "editor-editor",
+  "version": "0.1.0",
+  "url": "https://tinux-67.github.io/SN-Plugins/",
+  "download_url": "https://tinux-67.github.io/SN-Plugins/latest.zip",
+  "latest_url": "https://tinux-67.github.io/SN-Plugins/package.json"
+}
