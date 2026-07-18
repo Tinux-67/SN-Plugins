@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Graph Visualizer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sn-extension-api@1/dist/sn.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="plugin-container">
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search notes...">
+                <button id="searchClear" class="icon-btn">×</button>
+            </div>
+            <div class="filter-controls">
+                <select id="tagFilter" class="tag-select">
+                    <option value="">All Tags</option>
+                </select>
+                <button id="refreshBtn" class="btn">Refresh</button>
+                <button id="toggleView" class="btn">Toggle View</button>
+            </div>
+        </div>
+        <div class="stats-bar">
+            <span id="noteCount">0 notes</span> | 
+            <span id="tagCount">0 tags</span> | 
+            <span id="connectionCount">0 connections</span>
+        </div>
+        <div id="graphContainer" class="graph-container"></div>
+        <div id="detailPanel" class="detail-panel hidden">
+            <div class="detail-header">
+                <span id="detailTitle">Note Details</span>
+                <button id="closeDetail" class="icon-btn">×</button>
+            </div>
+            <div class="detail-content">
+                <div class="detail-section">
+                    <strong>Title:</strong> <span id="detailNoteTitle"></span>
+                </div>
+                <div class="detail-section">
+                    <strong>UUID:</strong> <span id="detailNoteUuid"></span>
+                </div>
+                <div class="detail-section">
+                    <strong>Created:</strong> <span id="detailNoteCreated"></span>
+                </div>
+                <div class="detail-section">
+                    <strong>Updated:</strong> <span id="detailNoteUpdated"></span>
+                </div>
+                <div class="detail-section">
+                    <strong>Tags:</strong> <div id="detailNoteTags" class="tag-list"></div>
+                </div>
+                <div class="detail-section">
+                    <strong>Preview:</strong> <div id="detailNotePreview" class="preview-text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "identifier": "dev.tinux-67.note-graph",
+  "name": "Note Graph Visualizer",
+  "description": "Visual representation of note-tag relationships with filtering and search capabilities",
+  "content_type": "SN|Component",
+  "area": "editor-editor",
+  "version": "1.0.0",
+  "url": "https://tinux-67.github.io/SN-Plugins/note-graph/",
+  "download_url": "https://tinux-67.github.io/SN-Plugins/note-graph/latest.zip",
+  "latest_url": "https://tinux-67.github.io/SN-Plugins/note-graph/package.json"
+}

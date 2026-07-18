@@ -1,25 +1,36 @@
 {
   "name": "sn-plugins",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Standard Notes plugins by Tinux-67",
   "main": "dist/index.html",
   "scripts": {
-    "build": "tsc && cp src/*.html dist/ && cp src/*.css dist/",
+    "build": "npm run build:plugins && npm run build:copy",
+    "build:plugins": "tsc -p tsconfig.json",
+    "build:copy": "copyfiles -u 1 src/**/*.html src/**/*.css dist/ && copyfiles -u 1 ext.json dist/",
+    "build:note-graph": "tsc src/note-graph/index.ts --outDir dist/note-graph --module ES2020 --target ES2020 --esModuleInterop --skipLibCheck",
     "watch": "tsc -w",
     "start": "npx serve dist",
-    "package": "npm run build && cd dist && zip -r ../latest.zip ."
+    "start:note-graph": "npx serve dist/note-graph",
+    "package": "npm run build && cd dist && zip -r ../latest.zip .",
+    "package:note-graph": "npm run build:note-graph && cd dist/note-graph && zip -r ../../note-graph.zip ."
   },
   "dependencies": {
+    "d3": "^7.8.5",
     "sn-extension-api": "^1.0.0"
   },
   "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "copyfiles": "^2.4.1",
     "typescript": "^5.0.0",
     "serve": "^14.0.0"
   },
   "keywords": [
     "standard-notes",
     "plugin",
-    "extension"
+    "extension",
+    "note-graph",
+    "visualization",
+    "tags"
   ],
   "author": "Tinux-67",
   "license": "MIT",

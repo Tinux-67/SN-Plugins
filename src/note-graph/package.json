@@ -1,0 +1,29 @@
+{
+  "name": "sn-note-graph",
+  "version": "1.0.0",
+  "description": "Note Graph Visualizer - Visual representation of note-tag relationships",
+  "main": "index.html",
+  "scripts": {
+    "build": "tsc index.ts --outDir dist --module ES2020 --target ES2020 --esModuleInterop --skipLibCheck",
+    "start": "npx serve .",
+    "package": "npm run build && zip -r ../../note-graph.zip dist/"
+  },
+  "dependencies": {
+    "d3": "^7.8.5",
+    "sn-extension-api": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "standard-notes",
+    "plugin",
+    "graph",
+    "visualization",
+    "tags",
+    "notes"
+  ],
+  "author": "Tinux-67",
+  "license": "MIT"
+}
